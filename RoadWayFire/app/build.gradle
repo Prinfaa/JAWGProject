@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    flatDir {
+        dir 'libs'
+    }
+}
+android {
+    compileSdkVersion 25
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.jinganweigu.RoadWayFire"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 3
+        versionName "1.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "9I8LEL6nKRA5nMxSbVvkL4",
+                GETUI_APP_KEY   : "6EXWSgdRkrAweY6QnhDz42",
+                GETUI_APP_SECRET: "6JTM7ZhKOh7QsfnNbx2o3A"
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86_64"
+        }
+        multiDexEnabled true
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            lintOptions {
+
+                checkReleaseBuilds false
+
+                abortOnError false
+
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    //沉浸式通知栏效果
+    compile 'com.alibaba:fastjson:1.2.17'
+    compile project(':imagepicker')
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/xUtils-2.6.14.jar')
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.getui:sdk:2.12.4.0'
+    compile 'com.xw.repo:xedittext:1.0.6@aar'
+    compile 'com.hikvision.ezviz:ezviz-sdk:4.7.1'
+    compile project(':library')
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.hikvision.ezviz:ezuikit:2.0'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    compile project(':pickerview')
+    //    implementation files('libs/mpchartlib.jar')
+    compile project(':wheelview')
+}

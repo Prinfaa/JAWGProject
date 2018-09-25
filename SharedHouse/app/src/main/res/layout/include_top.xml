@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ui_50_dp"
+    android:background="@color/bottom_background"
+    android:id="@+id/fl_title"
+    >
+    <TextView
+        android:id="@+id/top_name"
+        style="@style/match_weight_style"
+        android:layout_centerInParent="true"
+        android:text="登录"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_big_size" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_50_dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="12dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ui_10_dp"
+                android:src="@mipmap/back"
+                 />
+        </LinearLayout>
+
+
+
+
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+
+            <TextView
+                android:id="@+id/tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:gravity="center"
+                android:text="管理"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_big_size"
+                android:paddingRight="@dimen/ui_10_dp"
+
+                />
+
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_30_dp"
+        android:background="#d9eeff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_return_project"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="退货项目"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#84b0f5"
+            android:textSize="@dimen/ui_12_sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/home_line" />
+
+        <TextView
+            android:id="@+id/tv_good_return"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="数量"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#84b0f5"
+            android:textSize="@dimen/ui_12_sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/home_line" />
+
+        <TextView
+            android:id="@+id/tv_bad_return"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="数量"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#84b0f5"
+            android:textSize="@dimen/ui_12_sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

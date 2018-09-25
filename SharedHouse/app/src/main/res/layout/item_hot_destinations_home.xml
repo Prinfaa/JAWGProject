@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_view"
+        android:layout_width="160dp"
+        android:layout_height="238dp"
+        android:layout_marginLeft="@dimen/ui_5_dp"
+        android:layout_marginRight="@dimen/ui_5_dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="106dp"
+            />
+
+        <com.jinganweigu.entrysystem.view.PingFangTextView
+            android:id="@+id/tv_house_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="#5f5852"
+            android:textSize="10sp"
+            android:text="整套房子.3室2厅"
+            />
+        <com.jinganweigu.entrysystem.view.PingFangTextView
+            android:id="@+id/tv_house_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textColor="#454545"
+            android:textSize="17sp"
+            android:text="奥东别墅凤凰城"
+            />
+        <com.jinganweigu.entrysystem.view.PingFangTextView
+            android:id="@+id/tv_house_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:text="¥185.00/天"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_container1"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"/>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

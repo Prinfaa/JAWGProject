@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="40sp">
+
+    <RadioGroup
+        android:id="@+id/rgChose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="80sp">
+
+
+        <RadioButton
+            android:id="@+id/rbProperty"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:text="物业自管区域"
+            android:textColor="#3c70b6"
+            android:checked="true"
+            />
+
+        <RadioButton
+            android:id="@+id/rbShop"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:text="店铺管理区域"
+            android:textColor="#3c70b6" />
+
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        android:layout_marginTop="30sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginRight="5sp"
+            android:layout_weight="1"
+            android:background="#FF4081"
+            android:text="返回"
+            android:textColor="#FFF" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_marginLeft="5sp"
+            android:layout_weight="1"
+            android:background="#FF4081"
+            android:text="下一步"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+</LinearLayout>

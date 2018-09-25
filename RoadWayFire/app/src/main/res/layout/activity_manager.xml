@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ManagerActivity">
+
+
+    <include layout="@layout/include_top"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_username_manager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@drawable/shape_register_code_button"
+        android:layout_margin="@dimen/x30"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x30"
+        >
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="账号管理"
+            android:gravity="center_vertical"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/enter"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_class_manager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@drawable/shape_register_code_button"
+        android:layout_margin="@dimen/x30"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x30"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="班次管理"
+            android:gravity="center_vertical"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/enter"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_ipc_manager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x100"
+        android:background="@drawable/shape_register_code_button"
+        android:layout_margin="@dimen/x30"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/x30"
+        android:paddingRight="@dimen/x30"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="摄像头权限管理 "
+            android:gravity="center_vertical"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/enter"
+            />
+    </LinearLayout>
+
+</LinearLayout>

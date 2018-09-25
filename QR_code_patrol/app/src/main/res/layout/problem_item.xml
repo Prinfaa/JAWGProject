@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40sp"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="40sp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20sp"/>
+
+    <TextView
+        android:id="@+id/tvProblem"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_weight="1"
+        android:gravity="center|left"
+        android:textColor="#3c70b6"
+        android:textSize="13sp" />
+
+</LinearLayout>

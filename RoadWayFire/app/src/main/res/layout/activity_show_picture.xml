@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ShowPictureActivity">
+
+        <include layout="@layout/include_top"/>
+
+    <TextView
+        android:id="@+id/tv_new_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:text="1/1"
+        android:textColor="#fff"
+        android:paddingBottom="@dimen/x30"
+        android:paddingTop="@dimen/x30"
+        />
+
+    <com.lzy.imagepicker.view.ViewPagerFixed
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000" />
+
+
+
+
+
+
+</LinearLayout>

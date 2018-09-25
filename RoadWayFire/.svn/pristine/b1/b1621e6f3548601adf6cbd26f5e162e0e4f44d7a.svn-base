@@ -1,0 +1,62 @@
+package com.jinganweigu.RoadWayFire.service;
+
+import android.content.Context;
+import android.util.Log;
+
+import com.igexin.sdk.GTIntentService;
+import com.igexin.sdk.message.GTCmdMessage;
+import com.igexin.sdk.message.GTNotificationMessage;
+import com.igexin.sdk.message.GTTransmitMessage;
+
+public class GetuiMessageService extends GTIntentService {
+
+    public GetuiMessageService() {
+
+    }
+
+    @Override
+    public void onReceiveServicePid(Context context, int pid) {
+    }
+
+    @Override
+    public void onReceiveMessageData(Context context, GTTransmitMessage msg) {
+
+
+        String abc = new String(msg.getPayload());
+
+        Log.e(TAG, "onReceiveClientId -> " + "msg = " + abc);
+
+    }
+
+    @Override
+    public void onReceiveClientId(Context context, String clientid) {
+
+        Log.e(TAG, "onReceiveClientId -> " + "clientid = " + clientid);
+
+    }
+
+    @Override
+    public void onReceiveOnlineState(Context context, boolean online) {
+    }
+
+    @Override
+    public void onReceiveCommandResult(Context context, GTCmdMessage cmdMessage) {
+
+        Log.e(TAG, "onReceiveClientId -> " + "GTCmdMessage = " + cmdMessage.toString());
+
+    }
+
+    @Override
+    public void onNotificationMessageArrived(Context context, GTNotificationMessage msg) {
+
+        Log.e(TAG, "onReceiveClientId -> " + "GTNotificationMessage1 = " + msg);
+
+    }
+
+    @Override
+    public void onNotificationMessageClicked(Context context, GTNotificationMessage msg) {
+
+        Log.e(TAG, "onReceiveClientId -> " + "GTNotificationMessage2 = " + msg);
+
+    }
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_50_dp"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/back_btn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+
+            >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="12dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ui_10_dp"
+                android:background="@mipmap/back"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/top_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="登录"
+            android:gravity="center"
+            android:textColor="@color/font_color7"
+            android:textSize="@dimen/title_big_size"
+            />
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/ui_10_dp"
+                android:background="@mipmap/search"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/home_line"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_content_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x140"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginRight="@dimen/x30"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search_contant"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/x120"
+            android:layout_weight="1"
+            android:hint="请输入姓名"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="@dimen/x30"
+            android:textSize="@dimen/ui_16_sp"
+            android:background="@drawable/shape_register_code_button"
+            />
+
+    </LinearLayout>
+
+
+    <com.jinganweigu.RoadWayFire.ToolsUtils.widget.RefreshListView
+        android:id="@+id/lv_contact"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.jinganweigu.RoadWayFire.ToolsUtils.widget.RefreshListView>
+
+
+</LinearLayout>

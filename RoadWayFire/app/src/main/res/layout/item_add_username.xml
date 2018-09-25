@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x110"
+
+        >
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="@dimen/x300"
+            android:layout_height="wrap_content"
+            android:text="张三"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_trans"
+            android:layout_marginLeft="@dimen/x30"
+            android:textSize="15sp"
+            android:maxLines="1"
+            />
+
+        <TextView
+            android:id="@+id/tv_phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18777777777"
+            android:layout_centerVertical="true"
+            android:textColor="@color/black_trans"
+            android:layout_toRightOf="@id/tv_name"
+            android:layout_marginLeft="@dimen/x30"
+            android:textSize="15sp"
+            android:maxLines="1"
+            />
+
+    <LinearLayout
+        android:id="@+id/ll_delate"
+        android:layout_width="@dimen/x120"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/delate"
+            />
+
+
+    </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

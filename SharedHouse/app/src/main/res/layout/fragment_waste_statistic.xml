@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/details_text_color"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/ui_15_dp"
+        android:text="废品统计"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/ui_20_dp"
+        android:layout_marginRight="@dimen/ui_20_dp"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:layout_marginBottom="@dimen/dp_10"
+        >
+
+        <TextView
+            android:id="@+id/tv_waste_all_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="废品统计：0"
+            android:gravity="end"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="#d9eeff"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="设备类型"
+                android:gravity="center"
+                android:textSize="@dimen/ui_15_sp"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/home_line"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="数量"
+                android:gravity="center"
+                android:textSize="@dimen/ui_15_sp"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary"/>
+        
+        <ListView
+            android:id="@+id/lv_device_type"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#d9eeff"
+            android:scrollbars="none"
+            android:divider="@color/colorPrimary"
+            android:dividerHeight="1dp"
+            ></ListView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_30_dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/colorPrimary"
+                android:text="设备ID"
+                android:textSize="@dimen/ui_15_sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="退货项目"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/ui_15_sp"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/colorPrimary"
+                android:text="时间"
+                android:textSize="@dimen/ui_15_sp"
+                />
+        </LinearLayout>
+
+
+        <ListView
+            android:id="@+id/lv_device_information"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

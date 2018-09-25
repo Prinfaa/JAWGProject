@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        android:src="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000">
+
+                <FrameLayout
+                    android:layout_width="600px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="0px"
+                    android:layout_marginBottom="10px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bg11"
+                        android:scaleType="fitXY"
+                        android:layout_marginTop="10px"
+                        android:layout_marginBottom="5px"
+                        android:alpha="0.8"/>
+
+                    <LinearLayout
+                        android:layout_width="360px"
+                        android:layout_height="140px"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="90px"
+                        android:layout_marginRight="10px">
+
+                        <ImageView
+                            android:id="@+id/ivWeather"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:alpha="1"/>
+
+                        <TextView
+                            android:id="@+id/tvWeather"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="多云"
+                            android:textColor="#FFFFFF"
+                            android:textSize="70px" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginBottom="80px"
+                        android:layout_marginRight="10px"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="80px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="温度"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:id="@+id/tvTmp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="28℃"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="80px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="湿度"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:id="@+id/tvHum"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="69%"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="80px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="风向"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:id="@+id/tvDir"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="东南"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="80px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|left"
+                                android:text="风力"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:id="@+id/tvSc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="3级"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+
+                <FrameLayout
+                    android:layout_width="760px"
+                    android:layout_height="420px"
+                    android:layout_gravity="top|right"
+                    android:layout_marginTop="-30px"
+                    android:layout_marginRight="-50px">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bg22"
+                        android:scaleType="fitXY"
+                        android:alpha="0.8"
+                        />
+                    <LinearLayout
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="85px"
+                        android:layout_marginBottom="115px"
+                        android:layout_marginLeft="50px"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="2017.08.03"
+                            android:textColor="#FFFFFF"
+                            android:textSize="36px"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:id="@+id/tvWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="星期四"
+                            android:textColor="#FFFFFF"
+                            android:textSize="60px"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="23:50"
+                        android:textColor="#FFFFFF"
+                        android:textSize="120px"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="130px"
+                        android:layout_marginBottom="10px"
+                        />
+
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="760px"
+                    android:layout_height="560px"
+                    android:layout_gravity="top|right"
+                    android:layout_marginTop="220px"
+                    android:layout_marginRight="-50px">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/bg22"
+                        android:scaleType="fitXY"
+                        android:alpha="0.8"
+                        android:layout_marginTop="-20px"
+                        android:layout_marginBottom="-20px"
+                        />
+                    <LinearLayout
+                        android:layout_width="200px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="100px"
+                        android:layout_marginTop="-15px"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            android:layout_gravity="center"
+                            android:src="@drawable/fire_gas_white"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="环境气体"
+                            android:textColor="#FFFFFF"
+                            android:textSize="40px"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10px"/>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="150px"
+                        android:layout_marginTop="-20px"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="55px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:gravity="center|left"
+                                android:text="CH"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="19%LEL"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="55px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:gravity="center|left"
+                                android:text="CO"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="45ppm"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="55px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:gravity="center|left"
+                                android:text="SO"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="8ppm"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="260px"
+                            android:layout_height="55px"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1.5"
+                                android:gravity="center|left"
+                                android:text="H S"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:text="25%Vol"
+                                android:textColor="#FFFFFF"
+                                android:textSize="40px" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="175px"
+                        android:layout_marginRight="345px"
+                        android:textStyle="bold"
+                        android:textSize="20px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="283px"
+                        android:layout_marginRight="345px"
+                        android:textStyle="bold"
+                        android:textSize="20px"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="right"
+                        android:layout_marginTop="337px"
+                        android:layout_marginRight="372px"
+                        android:textStyle="bold"
+                        android:textSize="20px"/>
+
+
+                </FrameLayout>
+
+
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="5px"
+                android:layout_height="match_parent"
+                android:background="#993333"></LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#00000000">
+
+                <ImageView
+                    android:id="@+id/ivAlarmKeyFac"
+                    android:layout_width="240px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="160px"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/alarm_key_1" />
+                <ImageView
+                    android:id="@+id/ivCautionAlaryKey"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_gravity="right"
+                    android:src="@drawable/caution"
+                    android:layout_margin="30px"/>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="#993333"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000">
+
+                <ImageView
+                    android:id="@+id/ivWater"
+                    android:layout_width="300px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="70px"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/water_1" />
+                <ImageView
+                    android:id="@+id/ivCautionWater"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_gravity="right"
+                    android:src="@drawable/caution"
+                    android:layout_margin="30px"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="5px"
+                android:layout_height="match_parent"
+                android:background="#993333"></LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000">
+
+                <ImageView
+                    android:id="@+id/ivElectric"
+                    android:layout_width="300px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="70px"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/electric_1" />
+                <ImageView
+                    android:id="@+id/ivCautionElectric"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_gravity="right"
+                    android:src="@drawable/caution"
+                    android:layout_margin="30px"/>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="5px"
+                android:layout_height="match_parent"
+                android:background="#993333"></LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00000000">
+
+                <ImageView
+                    android:id="@+id/ivFireCar"
+                    android:layout_width="300px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="70px"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fire_car_btn_1" />
+                <ImageView
+                    android:id="@+id/ivCautionFireCar"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_gravity="right"
+                    android:src="@drawable/caution"
+                    android:layout_margin="30px"/>
+
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

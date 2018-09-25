@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.jinganweigu.entrysystem.activities.ManualEntryActivity">
+
+
+    <include layout="@layout/include_top" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/ui_15_dp"
+        android:background="@color/home_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.xw.repo.xedittext.XEditText
+            android:id="@+id/et_num"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ui_40_dp"
+            android:layout_marginLeft="@dimen/ui_10_dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_manual_entry_edit"
+            android:inputType="number"
+            android:paddingLeft="@dimen/ui_10_dp"
+            android:textSize="@dimen/ui_15_sp" />
+
+        <Button
+            android:id="@+id/sure"
+            android:layout_width="60dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="@dimen/ui_10_dp"
+            android:layout_marginRight="@dimen/ui_10_dp"
+            android:background="@drawable/shape_manual_entry_sure"
+            android:text="确认"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/ui_10_dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_register_code_button"
+        android:orientation="vertical">
+
+
+        <ListView
+            android:id="@+id/lv_deviceId"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/ui_10_dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_weight="1"
+            android:divider="@color/home_line"
+            android:dividerHeight="0.1dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/colorPrimary" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_return_part"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/ui_10_dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退货原因："
+                android:layout_marginLeft="@dimen/ui_5_dp"
+                android:textSize="@dimen/ui_16_sp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_40_dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_show_return_project"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="@dimen/ui_10_dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_manual_chose_project"
+                    android:gravity="center_vertical"
+                    android:hint="点击按钮选择退货项目..."
+                    android:paddingLeft="@dimen/ui_5_dp" />
+
+                <Button
+                    android:id="@+id/btn_choose_project"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="@dimen/ui_10_dp"
+                    android:layout_marginRight="@dimen/ui_10_dp"
+                    android:background="@drawable/shape_manual_entry_sure"
+                    android:text="退货项目"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/ed_why_return"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ui_5_dp"
+                android:background="@drawable/shape_manual_chose_project"
+                android:gravity="top"
+                android:hint="请输入退货原因..."
+                android:padding="@dimen/ui_5_dp" />
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_sure_enter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_40_dp"
+        android:layout_marginBottom="@dimen/ui_30_dp"
+        android:layout_marginLeft="@dimen/ui_15_dp"
+        android:layout_marginRight="@dimen/ui_15_dp"
+        android:background="@drawable/shape_manual_entry_surenter"
+        android:text="确认入库"
+        android:textColor="@color/bottom_background"
+        android:textSize="17sp"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_return"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_40_dp"
+        android:layout_marginBottom="@dimen/ui_30_dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_bad_return"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="@dimen/ui_15_dp"
+            android:layout_marginRight="@dimen/ui_20_dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_manual_entry_surenter"
+            android:text="损坏退货"
+            android:textColor="@color/bottom_background"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_good_return"
+            android:layout_width="0dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="@dimen/ui_20_dp"
+            android:layout_marginRight="@dimen/ui_15_dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_manual_entry_surenter"
+            android:text="正常退货"
+            android:textColor="@color/bottom_background"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

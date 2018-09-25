@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/realplay_page_ly"
+    tools:context=".Activities.MapVideoActivity">
+
+    <include
+
+        layout="@layout/include_top" />
+
+    <RelativeLayout
+        android:id="@+id/realplay_play_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/black_bg">
+
+
+
+        <SurfaceView
+            android:id="@+id/realplay_sv"
+            android:layout_width="600dp"
+            android:layout_height="240dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="false"
+            android:background="@android:color/transparent" />
+
+        <ProgressBar
+            android:id="@+id/pb_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:indeterminateDrawable="@drawable/progressbg"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_play_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:text="播放失败"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+
+        <com.videogo.widget.CheckTextButton
+            android:id="@+id/fullscreen_full_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/horizontal_fullscreen_button_selector"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_surface_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x120"
+            android:background="#a0000000"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/tv_surface_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:text="七号设备"
+                android:gravity="center"
+                android:textSize="15sp"
+                />
+
+            <ImageButton
+                android:id="@+id/btn_surface_back"
+                android:layout_width="@dimen/x120"
+                android:layout_height="@dimen/x120"
+                android:background="@null"
+                android:src="@mipmap/back"
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="#222222"
+        android:gravity="center"
+        >
+
+        <ImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/play_play_selector"
+             />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:background="#404040" />
+
+        <ImageButton
+            android:id="@+id/realplay_sound_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/ezopen_vertical_preview_sound_selector"
+             />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:background="#404040"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_get_picture"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="截图"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:background="#404040" />
+        <!-- 播放速度 -->
+
+        <TextView
+            android:id="@+id/tv_play_speed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="18dp"
+            android:background="#404040" />
+
+        <Button
+            android:id="@+id/btn_fullscreen"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/preview_enlarge_selector" />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/x15"
+        android:layout_marginBottom="@dimen/x15"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/x30"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/black_trans"
+                android:layout_marginTop="@dimen/x10"
+                android:text="位置："
+                />
+
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="状态："
+                android:textSize="13sp"
+                android:textColor="@color/black_trans"
+                android:layout_marginTop="@dimen/x10"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:gravity="center_vertical|right"
+            android:text="2018年"
+            android:layout_marginLeft="@dimen/x10"
+            android:paddingRight="@dimen/x40"
+            android:textColor="@color/black"
+            android:textSize="@dimen/ui_16_sp"
+            android:background="@color/white"
+            />
+    </LinearLayout>
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    >
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
+        <!--第一排-->
+        <TableRow
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="beginning|middle|end">
+            <!--一月-->
+            <TextView
+                android:id="@+id/tv_Janurary"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="一月"
+                android:textColor="@color/font_color" />
+            <!--二月-->
+            <TextView
+                android:id="@+id/tv_February"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="二月"
+                android:textColor="@color/font_color" />
+            <!--三月-->
+            <TextView
+                android:id="@+id/tv_March"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="三月"
+                android:textColor="@color/font_color" />
+            <!--四月-->
+            <TextView
+                android:id="@+id/tv_April"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="四月"
+                android:textColor="@color/font_color" />
+
+
+        </TableRow>
+        <!--第二排-->
+        <TableRow
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="beginning|middle|end">
+            <!--五月-->
+            <TextView
+                android:id="@+id/tv_May"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="五月"
+                android:textColor="@color/font_color" />
+            <!--六月-->
+            <TextView
+                android:id="@+id/tv_June"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="六月"
+                android:textColor="@color/font_color" />
+            <!--七月-->
+            <TextView
+                android:id="@+id/tv_July"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="七月"
+                android:textColor="@color/font_color" />
+            <!--八月-->
+            <TextView
+                android:id="@+id/tv_August"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="八月"
+                android:textColor="@color/font_color" />
+
+
+        </TableRow>
+
+        <!--第三排-->
+        <TableRow
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:showDividers="beginning|middle|end">
+            <!--九月-->
+            <TextView
+                android:id="@+id/tv_September"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="九月"
+                android:textColor="@color/font_color" />
+            <!--十月-->
+            <TextView
+                android:id="@+id/tv_October"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="十月"
+                android:textColor="@color/font_color" />
+            <!--十一月-->
+            <TextView
+                android:id="@+id/tv_November"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="十一月"
+                android:textColor="@color/font_color" />
+            <!--十二月-->
+            <TextView
+                android:id="@+id/tv_December"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/x30"
+                android:drawableTop="@mipmap/folder"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/x40"
+                android:text="十二月"
+                android:textColor="@color/font_color" />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+</ScrollView>
+</LinearLayout>

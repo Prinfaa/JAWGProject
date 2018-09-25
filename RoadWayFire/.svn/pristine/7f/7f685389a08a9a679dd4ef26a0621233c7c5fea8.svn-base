@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="温馨提示"
+        android:textColor="#434343"
+        android:textSize="20sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/xian_my"></View>
+    <TextView
+        android:id="@+id/dialog_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="温馨提示"
+        android:layout_marginLeft="@dimen/ui_15_dp"
+        android:layout_marginRight="@dimen/ui_15_dp"
+        android:textColor="#434343"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:gravity="center"
+        android:textSize="17sp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/xian_my"></View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="#f9961f"
+            android:textSize="20sp"
+            android:text="取消" />
+
+        <View
+            android:layout_width="0.1dp"
+            android:layout_height="40dp"
+            android:visibility="gone"
+            android:background="@color/xian_my"></View>
+
+        <TextView
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/green_text"
+            android:text="确定" />
+    </LinearLayout>
+</LinearLayout>

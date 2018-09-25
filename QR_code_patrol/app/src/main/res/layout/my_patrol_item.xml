@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60sp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="right|center"
+        android:padding="5sp"
+        android:text="巡检测试"
+        android:textColor="#3c70b6"
+        android:textSize="12sp"/>
+
+    <FrameLayout
+        android:layout_width="20sp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/llUp"
+            android:orientation="horizontal"
+            android:layout_width="1px"
+            android:layout_height="20sp"
+            android:background="#3c70b6"
+            android:layout_gravity="center|top"
+            />
+
+        <LinearLayout
+            android:id="@+id/llDown"
+            android:orientation="horizontal"
+            android:layout_width="1px"
+            android:layout_height="20sp"
+            android:background="#3c70b6"
+            android:layout_gravity="center|bottom"/>
+
+        <ImageView
+            android:layout_width="10sp"
+            android:layout_height="10sp"
+            android:src="@drawable/point"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="5sp"
+        android:gravity="left|center"
+        android:text="巡检测试"
+        android:textColor="#3c70b6"
+        android:textSize="12sp"/>
+
+
+</LinearLayout>

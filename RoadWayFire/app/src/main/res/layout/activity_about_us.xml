@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.AboutUsActivity">
+
+    <include layout="@layout/include_top" />
+
+    <ImageView
+        android:id="@+id/tv_company_logo"
+        android:layout_width="@dimen/x300"
+        android:layout_height="@dimen/x300"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x230"
+        android:scaleType="fitXY"
+        android:src="@mipmap/editmeandsave" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/x50"
+        android:text="车道占用"
+        android:textColor="@color/black_trans" />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="版本  1.0.0"
+        android:layout_marginTop="@dimen/x100"
+        android:layout_marginLeft="@dimen/x50"
+        />
+    <TextView
+        android:id="@+id/tv_custom_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客服  0531-85935100"
+        android:layout_marginTop="@dimen/x80"
+        android:layout_marginLeft="@dimen/x50"
+        />
+    <TextView
+        android:id="@+id/tv_technology_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="技术服务  0531-85935100"
+        android:layout_marginTop="@dimen/x80"
+        android:layout_marginLeft="@dimen/x50"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal|bottom"
+        >
+
+        <TextView
+            android:id="@+id/tv_company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x100"
+            android:gravity="center_vertical"
+            android:text="经安纬固消防科技有限公司"
+            android:drawableLeft="@mipmap/logo"
+            android:drawablePadding="@dimen/x50"
+            android:textColor="@color/black_trans"
+            android:textSize="@dimen/ui_15_sp"
+            android:layout_marginBottom="@dimen/x120"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

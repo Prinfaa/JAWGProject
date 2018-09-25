@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        android:layout_width="@dimen/x260"
+        android:layout_height="@dimen/x400"
+
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="@dimen/x260"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:text="济南市天桥区"
+        android:maxLines="1"
+        />
+
+
+</LinearLayout>

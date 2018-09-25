@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_50_dp"
+        android:background="@color/bottom_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_scan"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/scan" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ui_30_dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_manual_entry_surenter"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_search"
+                android:layout_width="@dimen/ui_40_dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/search" />
+
+            </LinearLayout>
+
+
+            <com.xw.repo.xedittext.XEditText
+                android:id="@+id/et_num"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ui_30_dp"
+                android:layout_marginRight="@dimen/ui_20_dp"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="设备ID"
+                android:singleLine="true"
+                android:inputType="number"
+                android:imeOptions="actionSearch"
+                android:paddingRight="@dimen/ui_15_dp"
+                android:textSize="@dimen/ui_15_sp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_resourses"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/resourses" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/statistics_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:layout_weight="1"></FrameLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

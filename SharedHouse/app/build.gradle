@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'android-apt'
+
+android {
+    lintOptions {
+        //lint 遇到 error 时继续 构建
+        abortOnError false
+        //build release 版本 时 开启lint 检测
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
+    defaultConfig {
+        applicationId "com.senmai.sharedhouse"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 2
+        versionName "2.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    compileOptions {//解决 Observable 不能使用1.7问题
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation files('libs/gson-2.2.1.jar')
+    implementation files('libs/xUtils-2.6.14.jar')
+    implementation 'com.github.githubwing:DragPhotoView:1.0.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.4'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation 'com.alibaba:fastjson:1.2.17'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'com.github.bumptech.glide:glide:3.5.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.google.zxing:core:3.3.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    implementation 'com.androidkun:XTabLayout:1.1.3'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.5'
+    implementation 'com.xw.repo:xedittext:1.0.6@aar'
+    implementation 'com.contrarywind:Android-PickerView:3.2.4'
+    implementation 'com.githang:status-bar-compat:latest.integration'//修改状态栏颜色
+
+//    compile 'com.github.PhilJay:MPAndroidChart:v3.0.0'
+}

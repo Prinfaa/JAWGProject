@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="2dp"
+    >
+
+
+    <ImageView
+        android:src="@drawable/patroled_icon"
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+
+        />
+
+    <TextView
+        android:id="@+id/tvPosition"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:textColor="#ffffff"
+        android:text="二层软件研发部"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        />
+</FrameLayout>

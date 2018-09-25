@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_message1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x170"
+        android:layout_marginLeft="@dimen/x30"
+        android:layout_marginTop="@dimen/x30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="@dimen/x170"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10"
+            >
+            <ImageView
+                android:id="@+id/iv_message_photo"
+                android:layout_width="@dimen/x150"
+                android:layout_height="@dimen/x150"
+                android:src="@mipmap/head_nor"
+                android:layout_centerInParent="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="@dimen/x50"
+                android:layout_height="@dimen/x50"
+                android:background="@mipmap/red_point"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/x5"
+                android:layout_marginRight="@dimen/x10"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="@color/white"
+                android:text="13"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x40"
+            android:paddingLeft="@dimen/x10"
+            android:paddingTop="@dimen/x10">
+
+            <TextView
+                android:id="@+id/tv_message_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="报警信息"
+                android:textColor="@color/black_trans"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_message_contant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/x15"
+                android:text="经安纬固消防科技"
+                android:textColor="@color/font_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/x40"
+                android:text="15:32"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/font_color"
+
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

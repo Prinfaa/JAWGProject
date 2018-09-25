@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.jinganweigu.entrysystem.activities.DeviceEnterExamineActivity">
+
+    <include layout="@layout/include_top"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <com.listview.SwipeListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#00000000"
+            android:dividerHeight="@dimen/ui_15_dp"
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_50_dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="合计："
+            android:textSize="@dimen/ui_17_sp"
+            android:layout_marginLeft="@dimen/ui_15_dp"
+            />
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="@dimen/ui_17_sp"
+            android:textColor="@color/bottom_background"
+            />
+
+        <Button
+            android:id="@+id/btn_sure"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="@color/bottom_background"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:text="确认入库"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jinganweigu.RoadWayFire.Activities.LoginActivity">
+
+    <include layout="@layout/include_top"
+        />
+
+<!--账号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x140"
+        android:orientation="horizontal"
+       android:layout_margin="@dimen/x40"
+        android:background="#f2f2f2"
+        >
+
+        <com.xw.repo.xedittext.XEditText
+            android:id="@+id/et_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="手机号"
+            android:maxLines="1"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:textSize="@dimen/ui_13_sp"
+            android:inputType="number"
+            />
+
+
+    </LinearLayout>
+
+    <!--密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x140"
+        android:orientation="horizontal"
+       android:layout_margin="@dimen/x40"
+        android:background="#f2f2f2"
+        >
+
+        <com.xw.repo.xedittext.XEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:hint="密码"
+            android:maxLines="1"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginLeft="@dimen/x30"
+            android:textSize="@dimen/ui_13_sp"
+            android:inputType="textPassword"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x140"
+        android:background="#f76968"
+        android:textSize="16sp"
+        android:text="登录"
+        android:textColor="#fff"
+        android:layout_marginTop="@dimen/x120"
+        android:layout_marginLeft="@dimen/x50"
+        android:layout_marginRight="@dimen/x50"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x160"
+        android:layout_marginRight="@dimen/x50"
+        android:layout_marginLeft="@dimen/x50"
+        android:orientation="horizontal"
+        android:gravity="right"
+        >
+
+        <Button
+            android:id="@+id/btn_forget_password"
+            android:layout_width="@dimen/x260"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:textColor="@color/black_trans"
+            android:text="忘记密码"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

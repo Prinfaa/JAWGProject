@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jinganweigu.entrysystem">
+
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 联网权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--安装apk文件8.0需要添加此权限-->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <!-- 自动聚焦权限 -->
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_ioc"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_ioc"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.MainActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <!-- android:windowSoftInputMode="stateHidden|stateAlwaysHidden" -->
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.PermissionsActivity"
+            android:theme="@style/AppTheme.NoActionBar.Permissions" />
+        <activity
+            android:name="com.google.zxing.activity.CaptureActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".activities.WebViewActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape" />
+        <activity android:name=".activities.RegisterActivity" />
+        <activity android:name=".activities.ForgetPasswordActivity" />
+        <activity android:name=".activities.DeviceEnterExamineActivity" />
+        <activity
+            android:name=".activities.ManualEntryActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activities.DetailActivity" />
+        <activity android:name=".activities.DeviceDeticalActivity" />
+        <activity android:name=".activities.MineActivity" />
+        <activity
+            android:name=".activities.ReturnReasonActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".activities.ReturnProjectDeticalActivity" />
+        <activity android:name=".activities.DeviceOutExamineActivity" />
+        <activity android:name=".activities.ExamineActivity"></activity>
+
+
+        <service android:name=".service.DownloadService"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.jinganweigu.entrysystem.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <!--元数据-->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+
+
+
+    </application>
+
+</manifest>

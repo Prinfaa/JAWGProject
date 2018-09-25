@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.dell_pc.myapplication.MainActivity"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnK88"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:text="K88    报警"
+        android:gravity="center"
+        android:background="#FF6666"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+
+    <Button
+        android:id="@+id/btnjawg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:text="经安纬固展示区    报警"
+        android:gravity="center"
+        android:background="#FF6666"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:text="盖世物流16号仓库    报警"
+        android:gravity="center"
+        android:background="#FF6666"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="盖家沟微信消防站1号车"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnUp1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:text="向车内补水"/>
+        <Button
+            android:id="@+id/btnDown1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:text="喷水灭火"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="盖家沟微信消防站2号车"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnUp2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:text="向车内补水"/>
+        <Button
+            android:id="@+id/btnDown2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:text="喷水灭火"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="盖家沟微信消防站3号车"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnUp3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:text="向车内补水"/>
+        <Button
+            android:id="@+id/btnDown3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:text="喷水灭火"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:text="北坦小区3号楼"
+        android:gravity="center"
+        android:background="#FF6666"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:text="北坦小区5号楼"
+        android:gravity="center"
+        android:background="#FF6666"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:text="巴黎花园小区16号楼"
+        android:gravity="center"
+        android:background="#FF6666"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10sp"
+        android:layout_weight="1"
+        android:text="清除报警"
+        android:gravity="center"
+        android:background="#66CC00"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+
+
+</LinearLayout>

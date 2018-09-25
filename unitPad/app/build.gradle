@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+//        config {
+//            keyAlias '111111'
+//            keyPassword '111111'
+//            storeFile file('C:/Users/dell/.android/lb.jks')
+//            storePassword '111111'
+//        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.example.dell_pc.unitpad"
+        minSdkVersion 17
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0.8"
+        ndk {
+            abiFilters "armeabi-v7a"//只支持32位
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile files('libs/mpandroidchartlibrary-2-1-6.jar')
+    compile files('libs/android-async-http-1.4.9.jar')
+    compile files('libs/httpclient-4.4.1.1.jar')
+    compile files('libs/EZOpenSDK_V4.5.1.20170721.jar')
+    compile files('libs/EZUIKit_1.2.jar')
+    compile files('libs/gson-2.7.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    implementation files('libs/BaiduLBS_Android.jar')
+}

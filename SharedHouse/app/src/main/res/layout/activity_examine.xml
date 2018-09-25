@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.jinganweigu.entrysystem.activities.ExamineActivity">
+
+    <include layout="@layout/include_top" />
+
+    <LinearLayout
+        android:id="@+id/ll_good"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/ui_3_dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_30_dp"
+            android:text="成品入库审核"
+            android:textColor="#81abf3"
+            android:textSize="@dimen/ui_15_sp" />
+
+        <TextView
+
+            android:id="@+id/tv_good_into_house_examine_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_30_dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="0"
+            android:textColor="#81abf3"
+            android:textSize="@dimen/ui_15_sp"
+            android:layout_marginRight="@dimen/ui_20_dp"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiantou_more"
+            android:layout_marginRight="@dimen/ui_10_dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_waste"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_30_dp"
+            android:text="废品入库审核"
+            android:textColor="#81abf3"
+            android:textSize="@dimen/ui_15_sp" />
+
+        <TextView
+            android:id="@+id/tv_waste_into_house_examine_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_30_dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="0"
+            android:textColor="#81abf3"
+            android:textSize="@dimen/ui_15_sp"
+            android:layout_marginRight="@dimen/ui_20_dp"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiantou_more"
+            android:layout_marginRight="@dimen/ui_10_dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_out"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_30_dp"
+            android:text="出库审核"
+            android:textColor="#81abf3"
+            android:textSize="@dimen/ui_15_sp" />
+
+        <TextView
+            android:id="@+id/tv_out_house_examine_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/ui_30_dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="0"
+            android:textColor="#81abf3"
+            android:textSize="@dimen/ui_15_sp"
+            android:layout_marginRight="@dimen/ui_20_dp"
+            />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiantou_more"
+            android:layout_marginRight="@dimen/ui_10_dp"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

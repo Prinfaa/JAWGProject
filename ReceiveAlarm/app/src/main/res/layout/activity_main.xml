@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnShowTrack"
+        android:layout_width="300px"
+        android:layout_height="120px"
+        android:layout_gravity="bottom|left"
+        android:text="行车轨迹展示"
+        android:layout_margin="30px"
+        android:visibility="gone"/>
+
+    <!-- 电子地图 -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <!-- 消音和火警消除按钮 -->
+    <LinearLayout
+        android:layout_width="240px"
+        android:layout_height="240px"
+        android:layout_gravity="bottom|right"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10px">
+
+        <Button
+            android:id="@+id/btnReceive"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5sp"
+            android:layout_weight="1"
+            android:background="#BB000000"
+            android:text="消音"
+            android:textColor="#FFFFFF"
+            android:textSize="25px" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="#BB000000"
+            android:text="消除火警"
+            android:textColor="#FFFFFF"
+            android:textSize="25px" />
+    </LinearLayout>
+
+    <!-- 屏保图片 -->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/llPic"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="#000000"-->
+        <!--android:visibility="gone">-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/ivPic"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/pic001" />-->
+
+    <!--</LinearLayout>-->
+
+    <!-- 车辆信息 -->
+    <FrameLayout
+        android:id="@+id/flCar"
+        android:layout_width="600px"
+        android:layout_height="600px"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_car"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnCarPackUp"
+            android:layout_width="140px"
+            android:layout_height="60px"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="190px"
+            android:layout_marginRight="120px"
+            android:background="#00000000"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvCarName"
+            android:layout_width="280px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginLeft="45px"
+            android:layout_marginTop="95px"
+            android:gravity="center"
+            android:text="盖家沟微型消防站0号车"
+            android:textColor="#FFFFFF"
+            android:textSize="22px" />
+
+        <LinearLayout
+            android:layout_width="130px"
+            android:layout_height="240px"
+            android:layout_gravity="right"
+            android:layout_marginRight="25px"
+            android:layout_marginTop="180px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:text="灭火剂："
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+                <TextView
+                    android:id="@+id/tvMaterial"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:text="额    定："
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+                <TextView
+                    android:id="@+id/tvWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5px"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="剩余灭火剂："
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+                <TextView
+                    android:id="@+id/tvLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10px"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="40px" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="120px"
+            android:layout_height="165px"
+            android:layout_gravity="left"
+            android:layout_marginLeft="56px"
+            android:layout_marginTop="160px"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center|left"
+                    android:text="指挥员："
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+                <ImageView
+                    android:id="@+id/ivMasterPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:padding="5px"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/phone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:gravity="center|left"
+                    android:text="驾驶员："
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDriver"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16px" />
+
+                <ImageView
+                    android:id="@+id/ivDriverPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:padding="5px"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/phone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300px"
+            android:layout_height="90px"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="75px"
+            android:layout_marginLeft="135px"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:text="随车装备："
+                android:textColor="#FFFFFF"
+                android:textSize="16px" />
+
+
+            <TextView
+                android:id="@+id/tvEquipment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="center|left"
+                android:textColor="#FFFFFF"
+                android:textSize="16px" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- 建筑物信息 -->
+    <FrameLayout
+        android:id="@+id/llConstruction"
+        android:layout_width="1000px"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40px"
+        android:layout_marginTop="30px"
+        android:background="#BB000000"
+        android:padding="1px"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BBFFFFFF"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="60px">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40px"
+                android:background="#BB000000"
+                android:orientation="horizontal"
+                android:paddingLeft="40px">
+
+                <ImageView
+                    android:id="@+id/ivPackUp1"
+                    android:layout_width="60px"
+                    android:layout_height="60px"
+                    android:padding="18px"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/pack_up1"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="建筑物基本信息"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18px" />
+
+                <TextView
+                    android:id="@+id/tvConsCancel"
+                    android:layout_width="150px"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|right"
+                    android:gravity="center"
+                    android:text="关闭"
+                    android:textColor="#FFFF00"
+                    android:textSize="18px"
+                    android:visibility="visible" />
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="280px"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginRight="10px"
+                    android:layout_marginTop="10px"
+                    android:layout_weight="1.2"
+                    android:background="#FFFFFF">
+
+                    <ImageView
+                        android:id="@+id/ivConsPic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5px"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/guangyewuliu" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300px"
+                    android:layout_gravity="center|top"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="10px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="20px"
+                        android:layout_marginTop="10px"
+                        android:background="#88000000"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50px"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#55000000"
+                                    android:gravity="center"
+                                    android:text="建筑名称"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                                <LinearLayout
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:background="#88FFFFFF" />
+
+                                <TextView
+                                    android:id="@+id/tvConsName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="5sp"
+                                    android:text="济南完美新娘婚纱摄影"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="#88FFFFFF" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50px"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#55000000"
+                                    android:gravity="center"
+                                    android:text="地        址"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                                <LinearLayout
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:background="#88FFFFFF" />
+
+                                <TextView
+                                    android:id="@+id/tvConsAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="5sp"
+                                    android:text="济南市历下区经十路16262号"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="#88FFFFFF" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50px"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#55000000"
+                                    android:gravity="center"
+                                    android:text="建筑类型"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                                <LinearLayout
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:background="#88FFFFFF" />
+
+                                <TextView
+                                    android:id="@+id/tvConsType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="5sp"
+                                    android:text="高层写字楼"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="#88FFFFFF" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50px"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#55000000"
+                                    android:gravity="center"
+                                    android:text="建筑结构"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                                <LinearLayout
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:background="#88FFFFFF" />
+
+                                <TextView
+                                    android:id="@+id/tvConsStructure"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="5sp"
+                                    android:text="钢筋混凝土结构"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="#88FFFFFF" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50px"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#55000000"
+                                    android:gravity="center"
+                                    android:text="建筑面积"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                                <LinearLayout
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:background="#88FFFFFF" />
+
+                                <TextView
+                                    android:id="@+id/tvConArea"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="5sp"
+                                    android:text="9000平法米"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="#88FFFFFF" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50px"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="#55000000"
+                                    android:gravity="center"
+                                    android:text="建筑高度"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                                <LinearLayout
+                                    android:layout_width="1px"
+                                    android:layout_height="match_parent"
+                                    android:background="#88FFFFFF" />
+
+                                <TextView
+                                    android:id="@+id/tvConHeight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="0.5"
+                                    android:gravity="left|center"
+                                    android:paddingLeft="5sp"
+                                    android:text="12层，36米"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18px" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1px"
+                                android:background="#88FFFFFF" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:background="#88000000"
+                android:minHeight="50px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="#55000000"
+                    android:gravity="center"
+                    android:text="消防设施"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18px" />
+
+                <LinearLayout
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="#88FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvConsFac"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="left|center"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="5sp"
+                    android:paddingTop="5sp"
+                    android:text="火灾自动报警、自动水喷淋、室内消火栓、机械防排烟、灭火器"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#88FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50px"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="存储物资"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26px" />
+
+                <LinearLayout
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="#88FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvConsGoods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="left|center"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="5sp"
+                    android:paddingTop="5sp"
+                    android:text="电子机械、木材、纸张、塑料制品、五金器具、木制家具"
+                    android:textColor="#FFFFFF"
+                    android:textSize="26px"
+
+                    />
+
+            </LinearLayout>
+
+            <!-- 建筑物内单位列表 -->
+            <LinearLayout
+                android:id="@+id/llUnit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="20px"
+                android:layout_marginTop="10px"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40px"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#BB000000"
+                            android:gravity="center|left"
+                            android:paddingLeft="20px"
+                            android:text="建筑物内单位列表"
+                            android:textColor="#FFFFFF"
+
+                            android:textSize="18px" />
+
+
+                    </LinearLayout>
+
+
+                    <ListView
+                        android:id="@+id/lvUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#88000000"
+                        android:scrollbars="none" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <Button
+            android:layout_width="800px"
+            android:layout_height="40px"
+            android:layout_gravity="bottom|center"
+            android:background="#FF6600"
+            android:layout_marginBottom="10px"
+            android:textColor="#FFFFFF"
+            android:text="一键通知全体业户"
+            android:textSize="20px"/>
+
+    </FrameLayout>
+
+
+
+</FrameLayout>

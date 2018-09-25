@@ -1,0 +1,20 @@
+package com.jinganweigu.RoadWayFire.Fragments;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import com.jinganweigu.RoadWayFire.BeseClassUtils.BaseFragment2;
+import com.jinganweigu.RoadWayFire.R;
+
+public class MessageFragment extends BaseFragment2 {
+    @Override
+    public View initView(LayoutInflater inflater, ViewGroup container) {
+        return inflater.inflate(R.layout.fragment_message,null);
+    }
+
+    @Override
+    public void initData() {
+
+    }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_40_dp"
+        android:gravity="center"
+        android:text="项目统计"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/ui_15_dp"
+        />
+
+    <com.github.mikephil.charting.charts.HorizontalBarChart
+        android:id="@+id/chart_right"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@android:color/white" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/home_line"
+        />
+
+    <ListView
+        android:id="@+id/lv_project"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/ui_10_dp"
+        ></ListView>
+
+
+
+
+</LinearLayout>

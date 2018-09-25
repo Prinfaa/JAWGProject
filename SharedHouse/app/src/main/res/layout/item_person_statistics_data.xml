@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/shape_project_statistics_list"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_20_dp"
+            android:layout_marginTop="@dimen/ui_5_dp"
+            android:layout_marginRight="@dimen/ui_20_dp"
+            android:layout_marginLeft="@dimen/ui_20_dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="张三"
+                android:textSize="@dimen/ui_15_sp"
+                android:textColor="#000"
+                />
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="领用总计："
+                android:textSize="@dimen/ui_12_sp"
+                android:layout_alignParentRight="true"
+                android:textColor="#000"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ui_20_dp"
+            android:layout_marginTop="@dimen/ui_8_dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/ui_20_dp"
+            android:layout_marginRight="@dimen/ui_20_dp"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_install"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:text="安装："
+                />
+            <TextView
+                android:id="@+id/tv_uninstall"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:text="安装："
+                />
+            <TextView
+                android:id="@+id/tv_return"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:text="安装："
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

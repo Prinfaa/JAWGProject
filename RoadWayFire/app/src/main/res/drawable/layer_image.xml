@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <!-- 最底层的图片，以x，y轴坐标为中心进行旋转-->
+        <rotate android:pivotX="0" android:pivotY="0"
+            android:fromDegrees="-10" android:toDegrees="-10">
+            <bitmap android:src="@mipmap/image_background"/>
+        </rotate>
+    </item>
+    <!-- 第二层的图片，以x，y轴坐标为中心进行旋转-->
+    <item>
+        <rotate android:pivotX="-10" android:pivotY="-10"
+            >
+            <bitmap android:src="@mipmap/image_background"/>
+        </rotate>
+    </item>
+    <!-- 最上层的图片，以x，y轴坐标为中心进行旋转-->
+    <item>
+        <rotate android:pivotX="-20" android:pivotY="-10"
+            android:fromDegrees="35" android:toDegrees="55">
+            <bitmap android:src="@mipmap/image_background"/>
+        </rotate>
+    </item>
+
+</layer-list>

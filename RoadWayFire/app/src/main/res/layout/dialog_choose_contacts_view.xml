@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="@dimen/x800"
+        android:layout_height="@dimen/x900"
+        android:orientation="vertical"
+        android:padding="@dimen/x20"
+        android:background="@color/white"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送给："
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/x20"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_name_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxLines="4"
+            android:layout_margin="@dimen/x20"
+            />
+
+        <EditText
+            android:id="@+id/et_leave_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x350"
+            android:background="@drawable/shape_person_funcation"
+            android:gravity="top"
+            android:hint="留言..."
+            android:textSize="13sp"
+            android:padding="@dimen/x10"
+            android:textColor="@color/black"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/x30"
+            android:gravity="right"
+            >
+            <Button
+                android:id="@+id/btn_channel"
+                android:layout_width="@dimen/x150"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="@color/black"
+                android:layout_marginRight="@dimen/x50"
+                />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="@dimen/x150"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:text="发送"
+                android:textColor="@color/green_text"
+                android:layout_marginRight="@dimen/x50"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
